@@ -111,7 +111,7 @@ private:
 
     const real HARDENING = 20.0,
                YOUNGS_MODULUS = 1.4e5,
-               POISSONS_RATIO = 0.499,
+               POISSONS_RATIO = 0.2, //0.2 soft  0.499 fluid
                STICKY = 1.,
                CRIT_COMPRESS = 1 - 2.5e-2,
                CRIT_STRETCH = 1 + 7.5e-3;

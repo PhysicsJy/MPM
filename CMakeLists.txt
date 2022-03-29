@@ -64,7 +64,7 @@ file(GLOB SOURCE
         "src/*.fs"
         "src/*.gs"
 )
-set(NAME "Test")
+set(NAME "MPM")
 add_executable(${NAME} ${SOURCE})
 target_link_libraries(${NAME} ${LIBS} glfw Eigen3::Eigen assimp::assimp glm::glm OpenMP::OpenMP_CXX)
 

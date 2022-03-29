@@ -239,7 +239,7 @@ int main()
             mpm.Advance(dt);
         }
         char fname[128];
-        sprintf(fname, "./image/test/frame_%05d.png", step);
+        sprintf(fname, "./image/solid/frame_%05d.png", step);
         saveImage(fname, window);
         glBindVertexArray(VAO);
         glBufferSubData(GL_ARRAY_BUFFER, 0, mpm.particles.Size() * sizeof(mpm.particles.x->data()), mpm.particles.x->data());
@@ -323,7 +323,7 @@ void saveImage(char *filepath, GLFWwindow *w)
     std::vector<char> buffer(bufferSize);
     glPixelStorei(GL_PACK_ALIGNMENT, 4);
     glReadBuffer(GL_FRONT);
-    glReadPixels(400, 400, width, height, GL_RGB, GL_UNSIGNED_BYTE, buffer.data());
+    glReadPixels(0, 0, width, height, GL_RGB, GL_UNSIGNED_BYTE, buffer.data());
     stbi_flip_vertically_on_write(true);
     stbi_write_png(filepath, width, height, nrChannels, buffer.data(), stride);
 }
